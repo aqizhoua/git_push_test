@@ -1,0 +1,13 @@
+- 损失函数的作用
+  - 计算实际输出和目标之间的差距
+  - 为我们更新输出提供一定的依据（反向传播）
+
+- debug模式下
+  - grad参数位置
+    - network 
+    - model1
+    - Protected Attributes
+    - _modules
+    - '0'
+    - weight
+    - grad
