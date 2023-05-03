@@ -25,7 +25,7 @@ class maxpool_base(nn.Module):
         self.maxpool1 = MaxPool2d(kernel_size=3,ceil_mode=True) #ceil_mode为True代表向上去整，即当剩余尺寸小于kernel_size大小时，仍然进行处理
 
     def forward(self,input):
-        output = self.maxpool1(input)#(5-3)/3+1=1 stride默认= kernel_size
+        output = self.maxpool1(input)#(5-3)/3+1=2 stride默认= kernel_size
         return output
 
 base = maxpool_base()
@@ -34,7 +34,7 @@ print(output)
 
 print("*"*100)
 
-dataset = torchvision.datasets.CIFAR10("./dataset",train=False,transform=torchvision.transforms.ToTensor(),download=True)
+dataset = torchvision.datasets.CIFAR10(r"D:\data\pytorch_notes_review\dataset",train=False,transform=torchvision.transforms.ToTensor(),download=True)
 dataloader = DataLoader(dataset,batch_size=64)
 
 writer = SummaryWriter("logs")
@@ -44,6 +44,7 @@ for data in dataloader:
     imgs,targets = data
     writer.add_images("input",imgs,step)
     output = base(imgs)
+    print(imgs.shape,output.shape)
     writer.add_images("output",output,step)
     step += 1
 

@@ -26,7 +26,7 @@ class base_network(nn.Module):
         return x
 
 
-dataset = torchvision.datasets.CIFAR10("./dataset",train=False,transform=torchvision.transforms.ToTensor(),download=True)
+dataset = torchvision.datasets.CIFAR10(r"D:\data\pytorch_notes_review\dataset",train=False,transform=torchvision.transforms.ToTensor(),download=True)
 dataloader = DataLoader(dataset,batch_size=1)
 
 network = base_network()

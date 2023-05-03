@@ -55,7 +55,7 @@ print(output.shape)
 
 print("*"*100)
 
-writer = SummaryWriter("logs")
+writer = SummaryWriter("logs_5.3")
 writer.add_graph(base,input) #add_graph函数：计算图
 writer.close()
 

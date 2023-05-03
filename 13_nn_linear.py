@@ -13,12 +13,10 @@ class base_linear(nn.Module):
         output = self.linear1(input)
         return output
 
-
 dataset = torchvision.datasets.CIFAR10("./dataset",train=False,transform=torchvision.transforms.ToTensor(),download=True)
 dataloader = DataLoader(dataset,batch_size=64)
 
 linear = base_linear()
-
 
 for data in dataloader:
     imgs,targets = data

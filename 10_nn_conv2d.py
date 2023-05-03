@@ -37,7 +37,7 @@ for data in dataloader:
     print(output.shape)
     print(img.shape)
 
-    #上两行输出如下 4个参数依次为：batch_size,channel_numbers,width,height
+    #上两行输出如下 4个参数依次为：batch_size,channel_numbers,height,width
     # torch.Size([64, 6, 30, 30])
     # torch.Size([64, 3, 32, 32])
 

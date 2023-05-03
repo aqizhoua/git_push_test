@@ -12,7 +12,7 @@
   - 第二部使用.to(device)
     - model = model.to(device)
   - 需要注意的是，这种方式下，model,loss_function可以不需要再重新赋值,而outputs和targets还是需要的
-    - 即model.to(device)
+    - 即model.to(device),而不是像第一种：model=model.to(device)
     - 
 
 在终端terminal输入nvidia-smi可以显示gpu占用信息

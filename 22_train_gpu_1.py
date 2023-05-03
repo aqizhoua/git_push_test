@@ -7,9 +7,9 @@ from torch.utils.tensorboard import SummaryWriter
 import time
 
 #准备数据集
-train_data = torchvision.datasets.CIFAR10("../dataset",train=True,transform=torchvision.transforms.ToTensor(),download=True)
+train_data = torchvision.datasets.CIFAR10(r"D:\data\pytorch_notes_review\dataset",train=True,transform=torchvision.transforms.ToTensor(),download=True)
 
-test_data = torchvision.datasets.CIFAR10("../dataset",train=False,transform=torchvision.transforms.ToTensor(),download=True)
+test_data = torchvision.datasets.CIFAR10(r"D:\data\pytorch_notes_review\dataset",train=False,transform=torchvision.transforms.ToTensor(),download=True)
 
 #length 长度
 train_data_size = len(train_data)
